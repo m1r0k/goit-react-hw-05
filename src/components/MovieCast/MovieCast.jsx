@@ -53,6 +53,7 @@ const MovieCast = () => {
           ))}
         </ul>
       )}
+      {!actor.length && <p>We don`t have nobody for this movie</p>}
     </>
   );
 };

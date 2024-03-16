@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import css from "./MovieList.module.css";
+import unknown from "../../components/img/unknown.jpg";
 
 const MovieList = ({ movies }) => {
   const location = useLocation();
@@ -11,7 +12,11 @@ const MovieList = ({ movies }) => {
           <NavLink to={`/movies/${id}`} state={{ from: location }}>
             <div className={css.div}>
               <img
-                src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+                src={
+                  poster_path
+                    ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+                    : unknown
+                }
                 width={120}
                 alt={title || original_title}
                 className={css.img}

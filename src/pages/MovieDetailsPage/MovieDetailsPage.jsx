@@ -11,6 +11,7 @@ import { Loader } from "../../components/Loader/Loader";
 import { FaArrowLeft } from "react-icons/fa6";
 import css from "./MovieDetailsPage.module.css";
 import clsx from "clsx";
+import unknown from "../../components/img/unknown.jpg";
 
 const linkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.isActive);
@@ -53,7 +54,11 @@ const MovieDetailsPage = () => {
       {movie && (
         <div className={css.div}>
           <img
-            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            src={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                : unknown
+            }
             alt={movie.title || movie.original_title || "Default title"}
             width={300}
           />
