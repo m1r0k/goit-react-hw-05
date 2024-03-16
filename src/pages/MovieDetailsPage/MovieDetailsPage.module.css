@@ -1,0 +1,17 @@
+.div {
+  display: flex;
+  /* gap: 20px; */
+}
+ul {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.details {
+  text-align: left;
+}
+
+.divDetails {
+  margin-left: 12px;
+}

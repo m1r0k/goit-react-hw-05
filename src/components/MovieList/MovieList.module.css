@@ -1,0 +1,28 @@
+.list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.div {
+  width: 120px;
+  justify-content: center;
+}
+
+.div :hover,
+:focus {
+  width: 105%;
+  color: #4fa94d;
+}
+
+.h3 {
+  text-align: center;
+  color: rgb(0, 15, 0);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.img {
+  margin-bottom: -12px;
+}

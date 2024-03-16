@@ -1,17 +1,18 @@
 import { Suspense } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { Loader } from "../Loader/Loader";
+import css from "./Navigation.module.css";
 
 export const Navigation = () => {
   return (
     <>
       <header>
         <nav>
-          <ul>
-            <li>
+          <ul className={css.list}>
+            <li className={css.item}>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
+            <li className={css.item}>
               <NavLink to="/movies">Movies</NavLink>
             </li>
           </ul>

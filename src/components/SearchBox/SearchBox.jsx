@@ -28,7 +28,7 @@ const SearchBox = ({ onHandlerSubmit }) => {
           placeholder="Search movies"
         />
         <button type="submit" className={css.btn}>
-          <IoSearch />
+          <IoSearch className={css.btnImg} />
         </button>
       </div>
     </form>

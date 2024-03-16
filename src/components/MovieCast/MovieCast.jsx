@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Loader } from "../Loader/Loader";
 import { getCast } from "../../services/api";
+import css from "./MovieCast.module.css";
+import unknown from "../../components/img/unknown.jpg";
 
 const MovieCast = () => {
   const { movieId } = useParams();
@@ -29,15 +31,22 @@ const MovieCast = () => {
       {isLoading && <Loader />}
       {error && <p>Something is wrong! Reload.</p>}
       {actor.length > 0 && (
-        <ul>
+        <ul className={css.list}>
           {actor.map(({ id, name, character, profile_path }) => (
-            <li key={id}>
+            <li key={id} className={css.item}>
               <img
-                src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
+                src={
+                  profile_path
+                    ? `https://image.tmdb.org/t/p/w500/${profile_path}`
+                    : unknown
+                }
                 alt={name}
+                width={120}
               />
               <div>
-                <p>{name ? name : "No information available"} </p>
+                <p className={css.p}>
+                  {name ? name : "No information available"}{" "}
+                </p>
                 <p>{character ? character : "No information available"} </p>
               </div>
             </li>

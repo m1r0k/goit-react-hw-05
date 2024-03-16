@@ -1,0 +1,35 @@
+.searchBar {
+  display: flex;
+  width: 320px;
+  background-color: white;
+  border: 1px solid rgb(0, 15, 0);
+  font-size: 18px;
+}
+
+.input {
+  width: 300px;
+  font-size: 18px;
+  padding: 4px;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.input :hover,
+:focus,
+:active {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 8px 8px 8px 0;
+}
+
+.btnImg {
+  color: rgb(0, 15, 0);
+}

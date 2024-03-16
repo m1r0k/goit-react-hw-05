@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  gap: 12px;
+}
+
+.item {
+  color: rgb(0, 15, 0);
+}
+
+.item :hover,
+:focus,
+:active {
+  color: #4fa94d;
+}

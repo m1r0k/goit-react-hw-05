@@ -22,12 +22,12 @@ export const getMovieById = async (movieId) => {
   const { data } = await axios.get(
     `movie/${movieId}?api_key=${API_KEY}&language=en-US`
   );
-  return data.results;
+  return data;
 };
 
 export const getCast = async (movieId) => {
   const { data } = await axios.get(
-    `movie/${movieId}/cast?api_key=${API_KEY}&language=en-US`
+    `movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`
   );
   return data.cast;
 };
@@ -36,7 +36,5 @@ export const getReview = async (movieId) => {
   const { data } = await axios.get(
     `movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US&page=1`
   );
-  return data.cast;
+  return data.results;
 };
-
-// https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1

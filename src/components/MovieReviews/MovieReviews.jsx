@@ -38,7 +38,7 @@ const MovieReviews = () => {
           ))}
         </ul>
       )}
-      {reviews.length === 0 && <p>We don`t have any reviews for thic movie</p>}
+      {!reviews.length && <p>We don`t have any reviews for thic movie</p>}
     </>
   );
 };
