@@ -44,7 +44,7 @@ const MovieDetailsPage = () => {
   return (
     <div>
       <Link to={goBack.current}>
-        <button>
+        <button className={css.btn}>
           <FaArrowLeft />
           Go back
         </button>
